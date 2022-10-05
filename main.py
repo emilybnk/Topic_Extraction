@@ -13,8 +13,8 @@ from nlp import nlp
 from nlp import nlp_overall, count_words
 from nlp2 import nlp2
 
-path = (Path().home()/"Documents"/"Emily"/"Uni"/"Master"/"HHU"/"2. Semester"
-        /"advanced NLP with Python"/"AP")
+path = (Path().home()/"Downloads"/"Topic_Extraction-main"
+        /"Topic_Extraction-main"/"Data")   # you may need to change this path
 file = os.listdir(path)
 
 # create dataframe:
@@ -45,8 +45,8 @@ print("sencond NLP analysis is done")
 # saving dfs as excell files:
 print("Saving DataFrames as excel files ...")
 
-path = (Path().home()/"Documents"/"Emily"/"Uni"/"Master"/"HHU"/"2. Semester"
-        /"advanced NLP with Python")
+path = (Path().home()/"Downloads"/"Topic_Extraction-main"
+        /"Topic_Extraction-main"/"results")  # you may need to cahnge this path
 os.chdir(path)
 df_overall.to_excel("df_overall.xlsx", encoding="utf-8-sig", index=False)
 df.to_excel("df.xlsx", encoding="utf-8-sig", index=False)
