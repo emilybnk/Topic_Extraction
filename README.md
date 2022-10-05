@@ -8,7 +8,8 @@ After that, a summary for every report is created in order to create context to 
 
 ## Data
 The annual reports between 1982 and 2021 were used. They can be found here: https://www.unicef.org/unicef-annual-report
-The filenames weren't the same after the download, so I changed them manually into this format: UNICEF-annual-report-1982
+The filenames weren't all the same after the download, so I changed them manually into this format: UNICEF-annual-report-1982.
+They can also be found in the data folder of this repository.
 
 ## Code
 There are 5 code files.
