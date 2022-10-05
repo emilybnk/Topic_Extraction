@@ -24,4 +24,5 @@ There are 5 code files.
 "main.py": by running this code all tasks above are executed (before, all the other files have to be executed so that main.py is able to load their functions)
 
 ## Requirements
-The requirements can be found in the "requirements.txt" file
+The python version 3.9 was used.
+The external packages that were used can be found in the "requirements.txt" file.
