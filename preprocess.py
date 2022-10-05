@@ -23,10 +23,14 @@ def extract_nouns(text):
         list of nouns.
 
     """
-    token = nltk.word_tokenize(text)
-    tag = nltk.pos_tag(token)
-    noun_list = ["NN","NNS","NNPS","NNP"]
-    nouns = [word for (word, pos) in tag if pos in noun_list]
+    token = nltk.word_tokenize(text)    # tokenize in words
+    tag = nltk.pos_tag(token)           # tag words
+    noun_list = ["NN","NNS","NNPS","NNP"]   # filter out the nouns
+    nouns = [word for (word, pos) in tag if pos in noun_list]   # store all noun in list
+
+    # convert nouns in lower case and filter out words under 2 letters
+    # (becasue the tagging doesn't work perfectly and some punctuations
+    # like * are left in the nouns list):
     nouns_list = [noun.lower() for noun in nouns if len(noun)>2]
     return nouns_list
 
@@ -44,7 +48,7 @@ def lemmatize(nouns_list):
 
     """
     lemmatizer = WordNetLemmatizer()
-    lemmatized = [lemmatizer.lemmatize(w) for w in nouns_list]
+    lemmatized = [lemmatizer.lemmatize(w) for w in nouns_list] # lemmatize nouns
     return lemmatized
 
 
@@ -62,12 +66,14 @@ def no_stopwords(lemmatized):
 
     """
     stop_words = stopwords.words("english")
+    # append stopwords to the list
     to_append = ["unicef","year","19",19,"report","annual","area","people","phc"
                  ,"cent","mr","co","’", "united","nations","nation","countries",
                  "tion","us","", "11_cc","inc","ar_2010_5","indd","new","every",
                  "ar_2010_5-11_cc.indd","inc.","reimagine","responding","years",
                  "unicefs","page"]
     stop_words += to_append
+    # remove stopwords from nouns-list:
     no_stop = [word for word in lemmatized if not word.lower() in stop_words]
     return no_stop
 
@@ -85,9 +91,9 @@ def preprocess(df_preprocess):
         returns the preprocessed dataframe.
 
     """
+    # use the functions above and create df columns
     df_preprocess["list_nouns"] = df_preprocess["text"].apply(extract_nouns)
     df_preprocess["lemmatized"] = df_preprocess["list_nouns"].apply(lemmatize)
     df_preprocess["list_w/o_stop"] = df_preprocess["lemmatized"].apply(no_stopwords)
 
-    df_preprocess = df_preprocess.astype({"year":"int"})
     return df_preprocess
