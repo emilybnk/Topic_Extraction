@@ -22,7 +22,10 @@ There are 5 code files.
 
 "nlp2.py": creates an extractie summary for every report
 
-"main.py": by running this code all tasks above are executed (before, all the other files have to be executed so that main.py is able to load their functions)
+"main.py": by running this code all tasks above are executed.
+
+### Run the Code
+In order to run the code, download the respository and unzip the foulder. In the main.py file change the directory if needed in order to process the data. Then execute all of the files mentioned above. Keep in mind to execute main.py last since this file loads functions from the other files.
 
 ## Requirements
 The python version 3.9 was used.
