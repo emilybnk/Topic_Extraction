@@ -3,3 +3,4 @@ numpy==1.20.3
 nltk==3.6.5
 pathlib==1.0.1
 PymuPDF==1.20.1
+fitz==0.0.1.dev2
