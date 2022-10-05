@@ -4,6 +4,8 @@
 The goal of this project is to determine the topics Unicef deals with through the years and to compare these goals. This is done via topic extraction of the different annual reports of Unicef.
 It was also investigated whether these topics match the topics on Unicef's website.
 
+After that, a summary for every report is created in order to create context to the extracted words
+
 ## Data
 The annual reports between 1982 and 2021 were used. They can be found here: https://www.unicef.org/unicef-annual-report
 The filenames weren't the same after the download, so I changed them manually into this format: UNICEF-annual-report-1982
