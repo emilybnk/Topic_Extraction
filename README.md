@@ -27,6 +27,15 @@ There are 5 code files.
 ### Run the Code
 In order to run the code, download the respository and unzip the foulder. In the main.py file change the directory if needed in order to process the data. Then execute all of the files mentioned above. Keep in mind to execute main.py last since this file loads functions from the other files.
 
+## Results
+In the results folder are the results of this project.
+
+"df.xlsx": shows the top 30 words and summary per report
+
+"df_overall.xlsx": shows the top 30 words over all reports
+
+"occurences.xlsx": shows how often a word is part of the top 30 words of the reports. (40 reports --> max number occurences = 40)
+
 ## Requirements
 The python version 3.9 was used.
 The external packages that were used can be found in the "requirements.txt" file.
