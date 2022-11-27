@@ -25,7 +25,7 @@ There are 5 code files.
 "main.py": by running this code all tasks above are executed.
 
 ### Run the Code
-In order to run the code, download the respository and unzip the foulder. In the main.py file change the directory if needed in order to process the data. Then execute all of the files mentioned above. Keep in mind to execute main.py last since this file loads functions from the other files.
+In order to run the code, download the annual reports from 1982 until 2021 (https://www.unicef.org/unicef-annual-report) and safe them under the following naming convention: UNICEF-annual-report-yyyy. In the main.py file change the directory if needed in order to process the data. Then execute all of the files mentioned above. Keep in mind to execute main.py last since this file loads functions from the other files.
 
 ## Results
 In the results folder are the results of this project.
